@@ -4,7 +4,7 @@ package ebay;
  * Hello java world!
  *
  */
-public class Apps
+public class App
 {
     public static void main( String[] args )
     {
