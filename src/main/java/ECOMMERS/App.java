@@ -1,13 +1,13 @@
 package ebay;
 
 /**
- * Hello java world!
+ * Hello  world!
  *
  */
 public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello java world!" );
+        System.out.println( "Hello  world!" );
     }
 }
