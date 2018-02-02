@@ -95,7 +95,7 @@
 									</goals>
 										<configuration>
 												<tasks>
-													<echo>======================>>>>>>>>>>>>>>deploy  phase</echo>
+													<echo><<<<<======================>>>>>>>>>>>>>>deploy  phase</echo>
 												</tasks>
 										</configuration>
 					</execution>
