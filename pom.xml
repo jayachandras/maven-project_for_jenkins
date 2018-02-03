@@ -67,7 +67,7 @@
 								</goals>
 									<configuration>
 											<tasks>
-												<echo><<<<<<<===========================>>>>>>>>>>>test phase</echo>
+												<echo><<<<<<<===========<<<<>>>>>================>>>>>>>>>>>test phase</echo>
 											</tasks>
 									</configuration>
 					</execution>
