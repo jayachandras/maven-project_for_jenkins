@@ -81,7 +81,7 @@
 									</goals>
 											<configuration>
 													<tasks>
-														<echo><<<<<<===================>>>>>>>>>>>>> package  phase</echo>
+														<echo><<<<<<=======<<<<>>>>>>============>>>>>>>>>>>>> package  phase</echo>
 													</tasks>
 											</configuration>
 					</execution>
