@@ -53,7 +53,8 @@
 								</goals>
 									<configuration>
 											<tasks>
-												<echo>==<<<<<================>>>>>>>>>>>compile  phase</echo>
+												<echo>=============>>>>>>>>>>>>> Compilation phase </echo>
+												<echo>                           ================= </echo>
 											</tasks>
 									</configuration>
 					</execution>
@@ -67,7 +68,8 @@
 								</goals>
 									<configuration>
 											<tasks>
-												<echo><<<<<<<===========<<<<>>>>>================>>>>>>>>>>>test phase</echo>
+												<echo>=============>>>>>>>>>>>>> Unit_TEst phase </echo>
+												<echo>                          =================</echo>
 											</tasks>
 									</configuration>
 					</execution>
@@ -81,7 +83,8 @@
 									</goals>
 											<configuration>
 													<tasks>
-														<echo><<<<<<=======<<<<>>>>>>============>>>>>>>>>>>>> package  phase</echo>
+														<echo>=============>>>>>>>>>>>>> Package phase </echo>
+														<echo>                       ================= </echo>
 													</tasks>
 											</configuration>
 					</execution>
@@ -95,7 +98,8 @@
 									</goals>
 										<configuration>
 												<tasks>
-													<echo><<<<<==========<<<>>>>============>>>>>>>>>>>>>>deploy  phase</echo>
+													<echo>=============>>>>>>>>>>>>> Deploy phase </echo>
+													<echo>                      	  =========== </echo>
 												</tasks>
 										</configuration>
 					</execution>
