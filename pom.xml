@@ -84,7 +84,7 @@
 											<configuration>
 													<tasks>
 														<echo>=============>>>>>>>>>>>>> Package phase </echo>
-														<echo>                       ================= </echo>
+														<echo>                       ============ </echo>
 													</tasks>
 											</configuration>
 					</execution>
