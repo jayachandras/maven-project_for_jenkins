@@ -15,6 +15,9 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+
+  
   <build>
     <finalName>ebay</finalName>
 	
@@ -92,6 +95,28 @@
 													</tasks>
 											</configuration>
 					</execution>
+					
+					
+										<execution>
+							<phase>install</phase>
+							<id>install</id>
+									<goals>
+										<goal>run</goal>
+									</goals>
+											<configuration>
+													<tasks>
+														<echo>=============>>>>>>>>>>>>> Install Phase </echo>
+
+														<echo>===========_============ </echo>
+
+														<echo>===================================== </echo>
+
+													</tasks>
+											</configuration>
+					</execution>
+					
+					
+					
 					
 					
 					<execution>
@@ -205,6 +230,25 @@
 		</plugins> 
 	
 	
-	
   </build>
+  
+  
+  <distributionManagement>
+    <repository>
+        <uniqueVersion>false</uniqueVersion>
+        <id>NexusRepo</id>
+        <name>Internal Releasesl</name>
+        <url>http://192.168.99.100:8081/nexus/content/repositories/MavenRelease/</url>
+        <layout>default</layout>
+    </repository>
+
+    <snapshotRepository>
+        <uniqueVersion>true</uniqueVersion>
+        <id>NexusRepo</id>
+        <name>Propellors Snapshots</name>
+        <url>http://192.168.99.100:8081/nexus/content/repositories/MavenSnap/</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
+  
 </project>
