@@ -4,14 +4,14 @@
   <groupId>ECOMMERS</groupId>
   <artifactId>ebay</artifactId>
   <packaging>war</packaging>
-  <version>1.0.#${BUILD_NUMBER}</version>
+  <version>${BUILD_NUMBER}</version>
   <name>ebay Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>3.8.1</version>s
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -236,17 +236,17 @@
   <distributionManagement>
     <repository>
         <uniqueVersion>false</uniqueVersion>
-        <id>NewRelease</id>
+        <id>NexusRepo</id>
         <name>Internal Releasesl</name>
-        <url>http://192.168.99.100:8081/nexus/content/repositories/NewRelease/</url>
+        <url>http://192.168.99.100:8081/nexus/content/repositories/MavenRelease/</url>
         <layout>default</layout>
     </repository>
 
     <snapshotRepository>
         <uniqueVersion>true</uniqueVersion>
-        <id>NewRelease</id>
+        <id>NexusRepo</id>
         <name>Propellors Snapshots</name>
-        <url>http://192.168.99.100:8081/nexus/content/repositories/Snapshots/</url>
+        <url>http://192.168.99.100:8081/nexus/content/repositories/MavenSnap/</url>
     </snapshotRepository>
   </distributionManagement>
   
