@@ -246,7 +246,7 @@
         <uniqueVersion>true</uniqueVersion>
         <id>NexusRepo</id>
         <name>Propellors Snapshots</name>
-        <url>http://192.168.99.100:8081/nexus/content/repositories/MavenSnap/</url>
+        <url>http://192.168.99.100:8081/nexus/content/repositories/MavenSna/</url>
     </snapshotRepository>
   </distributionManagement>
   
