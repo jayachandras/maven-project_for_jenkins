@@ -236,7 +236,7 @@
   <distributionManagement>
     <repository>
         <uniqueVersion>false</uniqueVersion>
-        <id>NexusRepo</id>
+        <id>NewRelease</id>
         <name>Internal Releasesl</name>
         <url>http://192.168.99.100:8081/nexus/content/repositories/NewRelease/</url>
         <layout>default</layout>
@@ -244,7 +244,7 @@
 
     <snapshotRepository>
         <uniqueVersion>true</uniqueVersion>
-        <id>NexusRepo</id>
+        <id>NewRelease</id>
         <name>Propellors Snapshots</name>
         <url>http://192.168.99.100:8081/nexus/content/repositories/Snapshots/</url>
     </snapshotRepository>
