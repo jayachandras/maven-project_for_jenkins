@@ -236,9 +236,9 @@
   <distributionManagement>
     <repository>
         <uniqueVersion>false</uniqueVersion>
-        <id>NexusRepo</id>
+        <id>NewRelease</id>
         <name>Internal Releasesl</name>
-        <url>http://192.168.99.100:8081/nexus/content/repositories/MavenRelease/</url>
+        <url>http://192.168.99.100:8081/nexus/content/repositories/NewRelease/</url>
         <layout>default</layout>
     </repository>
 
