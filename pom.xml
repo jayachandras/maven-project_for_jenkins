@@ -193,7 +193,7 @@
 				<configuration>
 				<executable>git</executable>     
 				 <arguments>
-					<argument>--version</argument>
+					<argument>version</argument>
 				 </arguments>
 				</configuration>
 			</plugin>
