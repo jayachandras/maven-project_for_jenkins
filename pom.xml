@@ -86,7 +86,7 @@
 									</goals>
 											<configuration>
 													<tasks>
-														<echo>=============>>>>>>>>>>>>> Package phase </echo>
+														<echo>=============>>>>>>>>>>>> Package phase </echo>
 
 														<echo>===========_============ </echo>
 
@@ -246,7 +246,7 @@
         <uniqueVersion>true</uniqueVersion>
         <id>NexusRepo</id>
         <name>Propellors Snapshots</name>
-        <url>http://192.168.99.100:8081/nexus/content/repositories/MavenSna/</url>
+        <url>http://192.168.99.100:8081/nexus/content/repositories/MavenSnap/</url>
     </snapshotRepository>
   </distributionManagement>
   
