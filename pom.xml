@@ -4,7 +4,7 @@
   <groupId>ECOMMERS</groupId>
   <artifactId>ebay</artifactId>
   <packaging>war</packaging>
-  <version>1.2.#${1}</version>
+  <version>1.0.${buildNumber}</version>
   <name>ebay Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
