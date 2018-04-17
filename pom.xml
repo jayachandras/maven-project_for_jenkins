@@ -5,20 +5,77 @@
   <artifactId>ebay</artifactId>
   <packaging>war</packaging>
   <version>1.0.${BUILD_NUMBER}</version>
+  
 <!--   <version>1.0-SNAPSHOT</version> -->
+
   <name>ebay Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
   </dependencies>
   
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<===============>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<===============>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   
+														BUILD_PROFILES
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<===============>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<===============>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
-  
+<profiles>
+	<profile>
+		<id>test</id>
+			<build>
+				<plugins> 
+					<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-antrun-plugin</artifactId>        															<!-- ||BUILD_PROFILES-->
+							<version>1.1</version>																							<!-- ||BUILD_PROFILES-->
+								<executions>																								<!-- ||BUILD_PROFILES-->	
+									<execution>																								<!-- ||BUILD_PROFILES-->
+											<phase>test</phase>																				<!-- ||BUILD_PROFILES-->			
+												<goals>																						<!-- ||BUILD_PROFILES-->
+													<goal>run</goal>
+												</goals>
+											<configuration>
+												<tasks>
+													<echo>Using env.test.properties</echo>
+													<copy file="src/main/resources/env-test.properties"
+													tofile="${project.build.outputDirectory}/env.properties" overwrite="true"/>
+													<delete file="${project.build.outputDirectory}/env-test.properties"/>
+													<delete file="${project.build.outputDirectory}/env-int.properties"/>
+													<delete file="${project.build.outputDirectory}/env-prod.properties"/>
+												</tasks>
+											</configuration>
+									</execution>
+								</executions>
+					</plugin>
+				</plugins> 
+			</build>
+	</profile>
+</profiles>
+
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<===============>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<===============>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   
+														BUILD_PROFILES
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<===============>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<===============>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+
+
+
+
+<!--Tipical Build Confuguration
+ =========================- -->
+
+
   <build>
     <finalName>ebay</finalName>
 	
@@ -27,13 +84,11 @@
 	<plugins> 
 		
 		<plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-antrun-plugin</artifactId>
-		<version>1.1</version>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-antrun-plugin</artifactId>
+			<version>1.1</version>
 		
-		
-	        <executions>
-			
+		        <executions>
 					<execution>
 							<phase>validate</phase>
 							<id>validate</id>
@@ -42,7 +97,7 @@
 								</goals>
 									<configuration>
 											<tasks>
-												 <echo> =======================>>>>>>>>>>>>>>>>>>>validate phase</echo>
+												 <echo> =======================>>>>>>>>>>>>>>>>validate phase</echo>
 											</tasks>
 									</configuration>
 					</execution>
@@ -128,17 +183,17 @@
 									</goals>
 										<configuration>
 												<tasks>
-													<echo>=============>>>>>>>>>> Deploy phase </echo>
-													<echo>====================================== </echo>
+													<echo>=============>>>>>>>>>> Deploy in to NexusRepo </echo>
+													<echo>==========================Deploy==phase ========== </echo>
 												</tasks>
 										</configuration>
 					</execution>
 					
 					
-	       </executions>
-		  </plugin>
+				</executions>
+		 </plugin>
 		
-		  <plugin>        
+<!-- 	<plugin>        
 				<groupId>org.apache.tomcat.maven</groupId>        
 				<artifactId>tomcat7-maven-plugin</artifactId>        
 				<version>2.2</version>        
@@ -150,8 +205,8 @@
 						<path>/ebay</path>
 		  
 					</configuration>
-		   </plugin>
-     
+		</plugin>
+      -->
 		  
 		  
 		  
