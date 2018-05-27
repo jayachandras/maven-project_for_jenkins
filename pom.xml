@@ -300,7 +300,7 @@
         <uniqueVersion>false</uniqueVersion>
         <id>NexusRepo</id>
         <name>Internal Releasesl</name>
-        <url>http://192.168.99.100:8081/nexus/content/repositories/Version_Release/</url>
+        <url>http://18.220.252.164:8082/nexus/content/repositories/release/</url>
         <layout>default</layout>
     </repository>
 
